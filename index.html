@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Speaker Blueprints™ | What Kind of Speaker Are You?</title>
+<meta name="description" content="Take the free 3-minute Speaker Blueprint assessment and discover your Speaker “It Factor”: the natural style behind your story and your impact.">
+<meta name="keywords" content="Speaker Kind, Speaker Type, Kind of Speaker, Type of Speaker, women speakers, speaker entrepreneurs">
+<meta name="author" content="Big Impact HQ">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#030512">
+<link rel="canonical" href="https://speakerblueprints.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://speakerblueprints.com/">
+<meta property="og:title" content="What Kind of Speaker Are You? Free 3-Minute Quiz">
+<meta property="og:description" content="Discover your Speaker “It Factor”: 6 Speaker Types, 3 minutes, instant results.">
+<meta property="og:image" content="https://speakerblueprints.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Speaker Blueprints: You Weren’t Born a Speaker. You Were Born With a Story. Six Speaker Types, free 3-minute quiz.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Kind of Speaker Are You? Free 3-Minute Quiz">
+<meta name="twitter:description" content="Discover your Speaker “It Factor”: 6 Speaker Types, 3 minutes, instant results.">
+<meta name="twitter:image" content="https://speakerblueprints.com/assets/og.jpg">
+<link rel="icon" href="assets/circle-storyteller.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/logo.webp">
+<style>
+:root{
+  --navy:#030512;
+  --gold:#e8c16c;
+  --gold-deep:#c99b4a;
+  --ink:#fff;
+  --soft:#d6dbe8;
+  --muted:#aab2c6;
+  --line:rgba(232,193,108,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul{list-style:none}
+
+/* The hero is exactly one screen. Everything in it is sized in rem and rem
+   scales with the screen, so the hero always fits with no scrolling.
+   The legal footer sits below the fold. */
+html{
+  font-size:clamp(11px,min(100vh/50.5,100vw/80),34px);
+  font-size:clamp(11px,min(100dvh/50.5,100vw/80),34px);
+  background:var(--navy);
+}
+body{
+  color:var(--ink);
+  font-family:'Roboto',system-ui,-apple-system,'Segoe UI',sans-serif;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  background:var(--navy);
+}
+.hero{
+  min-height:100vh;min-height:100dvh;
+  display:grid;place-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(46rem 36rem at 77% 34%,rgba(232,193,108,.18),transparent 66%),
+    radial-gradient(40rem 28rem at 4% 0%,rgba(110,139,164,.14),transparent 62%),
+    var(--navy);
+}
+
+/* ================= DESKTOP / LAPTOP ================= */
+.stage{
+  position:relative;width:80rem;height:100vh;height:100dvh;
+  --free:max(0px,100dvh - 46rem);
+  /* exactly half an inch of space above the button and below it */
+  --cta-gap:min(3.2rem,48px);
+}
+
+.photo{position:absolute;right:4.6rem;top:1rem;height:min(calc(100% - 7rem),44rem);pointer-events:none}
+.photo{--who-top:88%}
+.photo img{height:100%;width:auto;filter:drop-shadow(0 1.2rem 2.4rem rgba(0,0,0,.55))}
+/* Whose page this is: a name under the speaker, tucked into the faded base of the photo */
+.who{
+  position:absolute;right:0;top:calc(var(--who-top) + .2rem);
+  font-family:'Roboto Condensed','Roboto',sans-serif;font-weight:700;
+  font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.3;
+  color:var(--gold);white-space:nowrap;text-align:right;
+}
+
+/* Logo sits about half an inch from the top. The copy column is a grid whose
+   two spacer rows soak up any extra height, so spacing grows on taller screens. */
+.copy{
+  position:absolute;left:4.2rem;width:48rem;
+  top:min(3.2rem,48px);
+  display:grid;
+  grid-template-rows:auto auto calc(1.1rem + var(--free)*.1) auto calc(1.2rem + var(--free)*.16) auto var(--cta-gap) auto var(--cta-gap) auto;
+  align-content:start;
+}
+.copy>.logo{grid-row:1;justify-self:start}
+.copy>h1{grid-row:2}
+.copy>.sub{grid-row:4}
+.copy>.reveal{grid-row:6;justify-self:start}
+.copy>.cta{grid-row:8}
+.logo{width:5.3rem;margin:0 0 2.85rem -.2rem} /* .85rem + one blank line */
+
+/* Who it is for: sits beside the logo, so the blank line under the logo stays empty */
+.eyebrow{
+  position:absolute;left:6.9rem;top:1.65rem;transform:translateY(-50%);
+  font-family:'Roboto Condensed','Roboto',sans-serif;font-weight:700;
+  font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.3;
+  color:var(--gold);white-space:nowrap;
+}
+
+/* 1. Headline: the biggest, brightest thing on the page */
+h1{
+  font-family:'Roboto Condensed','Roboto',sans-serif;
+  font-weight:700;
+  font-size:3.6rem;
+  line-height:1.04;
+  letter-spacing:-.008em;
+}
+h1 .gold{display:block;color:var(--gold)}
+
+/* 2. Supporting line: quiet */
+.sub{max-width:38rem;font-size:1.08rem;line-height:1.55;color:var(--muted)}
+.sub em{font-style:italic;font-weight:500;color:var(--soft)}
+
+/* 3. Benefits: light, so they do not compete with the button */
+.reveal{padding-left:1.1rem;border-left:.14rem solid var(--line)}
+.reveal h2{
+  font-family:'Roboto Condensed',sans-serif;
+  font-weight:700;
+  font-size:.8rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:.8rem;
+}
+.reveal h2 span{color:var(--gold)}
+.reveal li{
+  position:relative;
+  padding-left:1.6rem;
+  font-size:1rem;
+  font-weight:400;
+  line-height:1.5;
+  margin-bottom:calc(.5rem + max(0px,100dvh - 46rem)*.04);
+  color:var(--soft);
+}
+.reveal li:last-child{margin-bottom:0}
+.reveal li::before{
+  content:"";position:absolute;left:0;top:.3rem;
+  width:.95rem;height:.95rem;border-radius:50%;
+  border:.07rem solid rgba(232,193,108,.7);
+  background:rgba(232,193,108,.1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.7 2.7L12 5.6' fill='none' stroke='%23e8c16c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/72% no-repeat;
+}
+
+/* 4. The button: the only solid, saturated block on the page */
+.cta{display:flex;align-items:center;gap:1.5rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.8rem;
+  min-width:21rem;
+  padding:1.15rem 2.2rem;
+  background:linear-gradient(180deg,#f4d791,var(--gold) 55%,#dcae56);
+  color:#10162e;
+  font-weight:900;font-size:1.06rem;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;
+  border-radius:.6rem;
+  box-shadow:0 0 0 .3rem rgba(232,193,108,.12),0 .8rem 2.2rem rgba(232,193,108,.34),inset 0 .08rem 0 rgba(255,255,255,.5);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-.12rem);box-shadow:0 0 0 .4rem rgba(232,193,108,.18),0 1.1rem 2.6rem rgba(232,193,108,.45),inset 0 .08rem 0 rgba(255,255,255,.5)}
+.btn:focus-visible{outline:.18rem solid #fff;outline-offset:.25rem}
+.btn .arrow{transition:transform .15s ease}
+.btn:hover .arrow{transform:translateX(.25rem)}
+.micro{font-size:.86rem;color:var(--muted);letter-spacing:.03em;line-height:1.4}
+.micro b{color:var(--gold);font-weight:700;display:block;font-size:.88rem;letter-spacing:.1em;text-transform:uppercase}
+
+/* 5. Six types: a quiet invitation underneath */
+.types{
+  position:relative;grid-row:10;justify-self:start;width:71.6rem;height:4.4rem;
+  display:flex;align-items:center;gap:2.4rem;
+  border-top:.06rem solid rgba(232,193,108,.14);
+}
+.types h2{
+  flex:none;width:12.5rem;
+  font-family:'Roboto Condensed',sans-serif;font-weight:700;
+  font-size:1.12rem;line-height:1.16;color:var(--soft);
+}
+.types h2 span{color:var(--gold);display:block}
+.types ul{flex:1;display:flex;justify-content:space-between;gap:.6rem}
+.types li{flex:1;text-align:center}
+.types img{width:2.9rem;height:2.9rem;margin:0 auto;border-radius:50%;opacity:.92;box-shadow:0 0 0 .08rem rgba(232,193,108,.3)}
+.types span.n{
+  display:block;margin-top:.35rem;
+  font-family:'Roboto Condensed',sans-serif;font-weight:700;
+  font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,193,108,.85);
+  white-space:nowrap;
+}
+
+/* wide, short screens are height-bound: there is no spare height to spread */
+@media (min-aspect-ratio:8/5){.stage{--free:0px}}
+
+/* ================= FOOTER (below the fold) ================= */
+.site-footer{
+  background:#02030d;
+  border-top:1px solid rgba(232,193,108,.16);
+  padding:36px 20px calc(32px + env(safe-area-inset-bottom));
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+  text-align:center;
+  font-size:14px;line-height:1.5;color:rgba(185,193,211,.85);
+}
+.site-footer img{width:64px}
+.site-footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+.site-footer a:hover{color:var(--gold)}
+.site-footer .sep{margin:0 10px;color:var(--gold-deep)}
+
+/* ================= TABLET / PHONE (portrait) ================= */
+@media (max-width:900px),(max-aspect-ratio:11/10){
+  html{
+    font-size:clamp(12px,min(100vh/48,100vw/24),26px);
+    font-size:clamp(12px,min(100dvh/48,100vw/24),26px);
+  }
+  .hero{
+    display:block;
+    background:
+      radial-gradient(30rem 22rem at 90% 55%,rgba(232,193,108,.14),transparent 65%),
+      radial-gradient(26rem 18rem at 0% 0%,rgba(110,139,164,.15),transparent 62%),
+      var(--navy);
+  }
+  .stage{
+    width:100%;max-width:30rem;height:auto;margin:0 auto;
+    min-height:100vh;min-height:100dvh;
+    padding:1.6rem 1.2rem 1.6rem;
+    display:flex;flex-direction:column;justify-content:center;
+    text-align:center;
+  }
+  .photo{display:none}
+  .copy,.types{position:static;left:auto;right:auto;top:auto;bottom:auto;width:auto}
+  .copy{display:contents}
+  .stage{height:auto}
+  .logo{width:6.4rem;margin:0 auto .4rem}
+  .eyebrow{position:static;transform:none;margin:0 auto .6rem;font-size:.7rem;letter-spacing:.12em;white-space:normal;max-width:20rem}
+  h1{font-size:1.8rem}
+  .sub{margin:.9rem auto 0;font-size:.9rem;line-height:1.5;max-width:22rem}
+  .reveal{
+    margin:1.2rem auto 0;text-align:left;width:100%;max-width:23rem;
+    background:rgba(11,16,38,.7);
+    border:.05rem solid var(--line);border-left:.14rem solid rgba(232,193,108,.5);
+    border-radius:.5rem;padding:.75rem .9rem .65rem;
+  }
+  .reveal h2{font-size:.68rem;margin-bottom:.4rem}
+  .reveal li{font-size:.8rem;line-height:1.6;padding-left:1.35rem;margin-bottom:0}
+  .reveal li::before{top:.28rem;width:.85rem;height:.85rem}
+  .cta{margin-top:1.4rem;flex-direction:column;gap:.55rem}
+  .btn{width:100%;max-width:23rem;min-width:0;padding:1rem 1rem;font-size:.92rem}
+  .micro{text-align:center;font-size:.76rem}
+  .micro b{display:inline;font-size:.76rem}
+  .micro b::after{content:" · ";color:var(--gold-deep);font-weight:400}
+  .types{display:block;height:auto;margin-top:1.6rem;padding-top:1rem}
+  .types h2{width:auto;font-size:1rem;margin-bottom:.8rem}
+  .types h2 span{display:inline}
+  .types ul{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem .4rem;max-width:20rem;margin:0 auto}
+  .types img{width:2.7rem;height:2.7rem}
+  .types span.n{font-size:.6rem;margin-top:.25rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- Kartra page-view tracking object (same attributes as the original Kartra page) -->
+<div style="height:0;width:0;opacity:0;position:fixed" class="js_kartra_trackable_object" data-kt-type="kartra_page_tracking" data-kt-value="v7bFqpBZ9eZa" data-kt-owner="dkR7Wjr6"></div>
+
+<div class="hero">
+<div class="stage">
+
+  <div class="photo">
+    <img src="assets/shannon.webp" width="834" height="1400" alt="Shannon speaking on stage" fetchpriority="high">
+    <p class="who">Shannon Grainger</p><!-- proof line goes here, e.g. <span class="proof">…</span>, once confirmed -->
+  </div>
+
+  <main class="copy">
+    <img class="logo" src="assets/logo.webp" width="900" height="560" alt="Speaker Blueprints™">
+    <p class="eyebrow">For women entrepreneurs who speak, or want to</p>
+
+    <h1><span class="gold">You Weren’t Born a Speaker.</span>You Were Born With a Story.</h1>
+
+    <p class="sub">Take the free 3-minute Speaker Blueprint assessment and discover your <em>Speaker “It Factor”</em>: the natural style behind your story and your impact.</p>
+
+    <section class="reveal" aria-labelledby="reveal-h">
+      <h2 id="reveal-h">In 3 minutes, your “<span>It Factor</span>” results reveal…</h2>
+      <ul>
+        <li>Which of the 6 Speaker Types you naturally are</li>
+        <li>The strengths that make your presence magnetic</li>
+        <li>How your type tells a story that moves people</li>
+        <li>The blind spots holding your message back</li>
+        <li>Your personalized Speaker Blueprint results</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <a class="btn" href="https://quiz.tryinteract.com/?kuid=251a2413-56c3-40c6-a244-e8ae52de7a63-1791902915&amp;kref=59HKj6kCgeCp#/6328fe85bd8447001686bc0c" target="_blank" rel="noopener">Discover My Speaker Type <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="micro"><b>Free</b>3 minutes · Instant results</p>
+    </div>
+
+  <section class="types" aria-labelledby="types-h">
+    <h2 id="types-h">6 Speaker Types. <span>Which one are you?</span></h2>
+    <ul>
+      <li><img src="assets/circle-storyteller.webp" width="200" height="200" alt=""><span class="n">The Storyteller</span></li>
+      <li><img src="assets/circle-motivator.webp" width="200" height="200" alt=""><span class="n">The Motivator</span></li>
+      <li><img src="assets/circle-performer.webp" width="200" height="200" alt=""><span class="n">The Performer</span></li>
+      <li><img src="assets/circle-orator.webp" width="200" height="200" alt=""><span class="n">The Orator</span></li>
+      <li><img src="assets/circle-activist.webp" width="200" height="200" alt=""><span class="n">The Activist</span></li>
+      <li><img src="assets/circle-professor.webp" width="200" height="200" alt=""><span class="n">The Professor</span></li>
+    </ul>
+  </section>
+  </main>
+
+
+</div><!-- /stage -->
+</div><!-- /hero -->
+
+<footer class="site-footer">
+  <img src="assets/bihq.webp" width="420" height="210" alt="Big Impact HQ">
+  <span>Big Impact, Inc. All rights reserved.</span>
+  <div><a href="https://bigimpacthq.com/event-terms-conditions/" target="_blank" rel="noopener">Terms &amp; Conditions</a><span class="sep">|</span><a href="https://bigimpacthq.com/terms-and-privacy-policy/" target="_blank" rel="noopener">Terms &amp; Privacy Policy</a></div>
+</footer>
+
+<!-- Kartra analytics / page tracking (same scripts the original Kartra page loads) -->
+<script>window.global_id='v7bFqpBZ9eZa';window.secure_base_url='//app.kartra.com/';var google_analytics=null;</script>
+<script async src="https://app.kartra.com/resources/js/analytics/dkR7Wjr6"></script>
+<script async src="https://app.kartra.com/resources/js/page_check?page_id=v7bFqpBZ9eZa"></script>
+
+<!-- Facebook Pixel (same ID as the original Kartra page) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1594130054158449');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1594130054158449&ev=PageView&noscript=1"></noscript>
+</body>
+</html>
